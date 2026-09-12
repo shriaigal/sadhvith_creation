@@ -69,9 +69,9 @@ export default function Footer() {
         <p>
           © {year} {config.brandName}. All rights reserved.
         </p>
-        {/* <Link to="/manager/login" className="footer-manager-link">
+        <Link to="/manager/login" className="footer-manager-link">
           Manager Login
-        </Link> */}
+        </Link>
       </div>
     </footer>
   );
