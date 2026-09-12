@@ -43,9 +43,9 @@ export default function ManagerRegister() {
       <div className="container">
         <div className="manager-auth-card">
           <h1>Manager Registration</h1>
-          <p className="muted">
+          {/* <p className="muted">
             Already have an account? <Link to="/manager/login">Log in</Link>
-          </p>
+          </p> */}
 
           {error && <div className="form-error">{error}</div>}
 

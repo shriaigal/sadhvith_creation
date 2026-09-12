@@ -34,7 +34,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/manager/login" element={<ManagerLogin />} />
-            <Route path="/manager/register" element={<ManagerRegister />} />
+            <Route path="*" element={<ManagerRegister />} />
             <Route
               path="/manager/dashboard"
               element={
