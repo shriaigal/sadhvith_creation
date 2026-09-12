@@ -27,68 +27,49 @@ export default function App() {
 
         <main>
           <Routes>
-  <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:slug" element={<ProductDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-  <Route path="/products" element={<Products />} />
-  <Route path="/products/:slug" element={<ProductDetails />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/contact" element={<Contact />} />
+            <Route path="/manager/login" element={<ManagerLogin />} />
+            <Route path="/manager/register" element={<ManagerRegister />} />
+            <Route
+              path="/manager/dashboard"
+              element={
+                <ProtectedRoute>
+                  <ManagerDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/manager/products"
+              element={
+                <ProtectedRoute>
+                  <ManageProducts />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/manager/products/add"
+              element={
+                <ProtectedRoute>
+                  <AddProduct />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/manager/products/edit/:id"
+              element={
+                <ProtectedRoute>
+                  <EditProduct />
+                </ProtectedRoute>
+              }
+            />
 
-  {/* Manager Authentication */}
-  <Route
-    path="/manager/login"
-    element={<ManagerLogin />}
-  />
-
-  <Route
-    path="/manager/register"
-    element={<ManagerRegister />}
-  />
-
-  {/* Manager Dashboard */}
-  <Route
-    path="/manager/dashboard"
-    element={
-      <ProtectedRoute>
-        <ManagerDashboard />
-      </ProtectedRoute>
-    }
-  />
-
-  {/* Manager Products */}
-  <Route
-    path="/manager/products"
-    element={
-      <ProtectedRoute>
-        <ManageProducts />
-      </ProtectedRoute>
-    }
-  />
-
-  <Route
-    path="/manager/products/add"
-    element={
-      <ProtectedRoute>
-        <AddProduct />
-      </ProtectedRoute>
-    }
-  />
-
-  <Route
-    path="/manager/products/edit/:id"
-    element={
-      <ProtectedRoute>
-        <EditProduct />
-      </ProtectedRoute>
-    }
-  />
-
-  {/* 404 */}
-  <Route
-    path="*"
-    element={<NotFound />}
-  />
-</Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </main>
 
         <Footer />
