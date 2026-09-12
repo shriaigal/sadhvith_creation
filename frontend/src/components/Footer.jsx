@@ -67,7 +67,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>
-          © {year} {config.brandName}. All rights reserved.| developed by-<a href="https://shriaigal-personal-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Shri aigal</a>
+          © {year} {config.brandName}. All rights reserved.| developed by: <a href="https://shriaigal-personal-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Shri aigal</a>
         </p>
         {/* <Link to="/manager/login" className="footer-manager-link">
           Manager Login
